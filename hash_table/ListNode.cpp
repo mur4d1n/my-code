@@ -1,6 +1,6 @@
 #include "ListNode.h"
 
-void ListNode<int>::insert(int newValue)
+void ListNode<int>::insert(int newValue) //Insertion function for hand-made linked list
 {
 	ListNode<int>* tmp = this;
 
@@ -13,7 +13,7 @@ void ListNode<int>::insert(int newValue)
 }
 
 template <>
-ListNode<int>::ListNode() {
+ListNode<int>::ListNode() { //Constructor for empty ListNode object
 	this->value = 0;
 	this->next = nullptr;
 }
