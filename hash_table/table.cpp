@@ -1,4 +1,9 @@
-﻿#include <iostream>
+//So, this prog works with my own hashtable realisation using also my own realisation of linked list to solve collisions
+//Hash function looks like (number % const = number_index)
+//Prog takes constant from console and then list of numbers in one string
+//After making hashtable it shows in a console window
+
+#include <iostream>
 #include <string>
 #include <sstream>
 #include "HashTable.h"
@@ -20,7 +25,7 @@ int main()
     std::stringstream x;
     x << elems;
 
-    while (x >> n)
+    while (x >> n) //Filling of hashtable
     {
         for (int i = 0; i < n.length(); i++)
         {
@@ -33,7 +38,7 @@ int main()
     }
 
 
-    for (int i = 0; i < remainder; i++)
+    for (int i = 0; i < remainder; i++) //Showing hashtable
     {
         std::cout << i << ": ";
         ListNode<int>* number = table.values[i];
